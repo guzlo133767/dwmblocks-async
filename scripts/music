@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case "$BLOCK_BUTTON" in
+      1) playerctl play-pause ;;
+      4) playerctld shift ;;
+      5) playerctld unshift ;;
+esac
+
+song="$(playerctl metadata --format="{{title}} - {{artist}}")" || exit 2
+
+if playerctl status | grep -q Playing; then
+	icon="  "
+else 
+	icon="  "
+fi
+
+echo "$icon$song"

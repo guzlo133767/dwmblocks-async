@@ -1,0 +1,13 @@
+#!/bin/bash
+
+case "$BLOCK_BUTTON" in
+	2) wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle;;
+esac
+
+if wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q "[MUTED]"; then
+	mic="󰍭"
+else
+	mic=""
+fi
+
+echo "$mic"
