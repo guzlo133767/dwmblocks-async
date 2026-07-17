@@ -17,8 +17,7 @@
 #define TRAILING_DELIMITER 0
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
-#define BLOCKS(X)             \
-    X("", "~/dwmblocks-async/scripts/music",	    1, 3)\
+#define BLOCKS(X)             
     X("", "~/dwmblocks-async/scripts/volume",         1, 2)\
     X("", "~/dwmblocks-async/scripts/lang",           1, 5)\
     X("", "date '+%d/%m/%y %H:%M:%S'", 1, 1)\
